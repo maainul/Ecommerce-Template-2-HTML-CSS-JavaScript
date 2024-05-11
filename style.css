@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600");
+
+/* Remove Default Margin and paddings for all HTML elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS variables to use any where in website (if you want to change theme one change here will apply to entire website) */
+:root {
+    --heading: #393A56;
+    --text: #7E7F85;
+    --theme: #FD5353;
+    --bg: #F7F8F9;
+    --footerBg: #415161;
+
+    --h1-1280: 3rem;
+    --h2-1280: 2.5rem;
+    --h4-1280: 1.6rem;
+    --h3-1280: 1rem;
+
+    --h1-1024: 2.8rem;
+    --h2-1024: 2.3rem;
+    --h4-1024: 1.4rem;
+    --h3-1024: 1rem;
+
+    --h1-768: 2.6rem;
+    --h2-768: 2.1rem;
+    --h4-768: 1.2rem;
+    --h3-768: 1rem;
+
+    --h1-640: 2.4rem;
+    --h2-640: 1.9rem;
+    --h4-640: 1rem;
+    --h3-640: 1rem;
+
+    --h1-475: 1.8rem;
+    --h2-475: 1.5rem;
+    --h4-475: 1rem;
+    --h3-475: 0.8rem;
+}
+
+
+/* General Style */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+li {
+    list-style: none;
+    margin: 0 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3.6rem;
+    color: var(--heading);
+}
+
+h3 {
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: var(--heading);
+    font-weight: 700;
+}
+
+
+.btn {
+    background-color: var(--theme);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 15px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(255, 38, 0);
+    transition: 0.5s ease;
+}
+
+.container {
+    padding: 0 10%;
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg);
+}
+
+.navbar__itemlist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__itemlist img {
+    width: 50px;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--bg);
+    height: 80vh;
+    gap: 20px;
+    background-image: url(img/main.png);
+    background-repeat: no-repeat;
+    background-position: right 20% top 25%;
+    background-size: 28% auto;
+    right: 0;
+
+}
+
+
+.hero h3 {
+    width: 50%;
+}
+
+.line {
+    border: 2px solid tomato;
+    width: 8%;
+}
+
+
+
+/* Media Query */
+
+@media (max-width:1280px) {
+    h1 {
+        font-size: var(--h1-1280)
+    }
+
+    h3 {
+        font-size: var(--h3-1280)
+    }
+
+    h4 {
+        font-size: var(--h4-1280)
+    }
+}
+
+@media (max-width:1024px) {
+    h1 {
+        font-size: var(--h1-1024)
+    }
+
+    h3 {
+        font-size: var(--h3-1024)
+    }
+
+    h4 {
+        font-size: var(--h4-1024)
+    }
+
+    .hero {
+        background-position: right 5% bottom 40%;
+        background-size: 35% auto;
+        /* right: 0; */
+
+    }
+}
+
+
+@media (max-width:768px) {
+    h1 {
+        font-size: var(--h1-768)
+    }
+
+    h3 {
+        font-size: var(--h3-768)
+    }
+
+    h4 {
+        font-size: var(--h4-768)
+    }
+
+    .hero {
+        background-position: right 5% bottom 40%;
+        background-size: 35% auto;
+        /* right: 0; */
+
+    }
+}
+
+@media (max-width:640px) {
+    h1 {
+        font-size: var(--h1-640)
+    }
+
+    h3 {
+        font-size: var(--h3-640)
+    }
+
+    h4 {
+        font-size: var(--h4-640)
+    }
+
+    .hero {
+        background-position: right 5% bottom 20%;
+        background-size: 35% auto;
+        /* right: 0; */
+
+    }
+
+    .navbar__itemlist {
+        display: none;
+    }
+}
+
+@media (max-width:475px) {
+    h1 {
+        font-size: var(--h1-475);
+        text-align: center;
+    }
+
+    h3 {
+        font-size: var(--h3-475)
+    }
+
+    h4 {
+        font-size: var(--h4-475)
+    }
+
+    .hero {
+        background: none;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+
+    .navbar__itemlist {
+        display: none;
+    }
+
+    .hero h3 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .line {
+        display: none;
+    }
+}
