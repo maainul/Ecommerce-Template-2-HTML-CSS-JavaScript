@@ -85,6 +85,10 @@ h4 {
     font-weight: 700;
 }
 
+p {
+    color: var(--heading);
+    font-weight: 600;
+}
 
 .btn {
     background-color: var(--theme);
@@ -102,6 +106,11 @@ h4 {
 .container {
     padding: 0 10%;
 }
+
+.section-padding {
+    padding-top: 10rem;
+}
+
 
 /* Navbar */
 #navbar {
@@ -148,7 +157,26 @@ h4 {
     width: 8%;
 }
 
+/* Category */
+.category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
 
+.cat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    cursor: pointer;
+}
+
+.cat:hover img {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
 
 /* Media Query */
 
@@ -182,8 +210,11 @@ h4 {
     .hero {
         background-position: right 5% bottom 40%;
         background-size: 35% auto;
-        /* right: 0; */
+    }
 
+    /* Catgory */
+    .cat img {
+        width: 100%;
     }
 }
 
@@ -232,6 +263,14 @@ h4 {
     .navbar__itemlist {
         display: none;
     }
+
+    .cat p {
+        font-size: 12px;
+    }
+
+    .cat h4 {
+        font-size: 14px;
+    }
 }
 
 @media (max-width:475px) {
@@ -266,5 +305,22 @@ h4 {
 
     .line {
         display: none;
+    }
+
+    .category {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+
+    }
+
+    .cat img {
+        width: 80%;
+    }
+
+    .section-padding {
+        padding-top: 2rem;
     }
 }
