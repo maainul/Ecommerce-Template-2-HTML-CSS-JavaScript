@@ -57,7 +57,16 @@ li {
 
 a {
     text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: 0.5s ease;
 }
+
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
 
 h1 {
     font-size: 3.6rem;
