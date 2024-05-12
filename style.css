@@ -268,6 +268,13 @@ p {
     max-width: 600px;
 }
 
+/* Featured Companies */
+.featured__companies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
 /* Media Query */
 
 @media (max-width:1280px) {
@@ -345,8 +352,6 @@ p {
     .hero {
         background-position: right 5% bottom 40%;
         background-size: 35% auto;
-        /* right: 0; */
-
     }
 
     .offer-img img {
@@ -356,6 +361,19 @@ p {
     .section-padding {
         padding: 3rem;
     }
+
+    /* Featured Companies */
+    .featured__companies {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured__companies img {
+        width: 100%;
+    }
+
+
 }
 
 @media (max-width:640px) {
