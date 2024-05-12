@@ -118,23 +118,56 @@ p {
 }
 
 
-/* Navbar */
+/************************* HEADER *************** */
+#header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg);
+    padding: 20px 80px;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    top: 0;
+    left: 0;
+}
+
 #navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: var(--bg);
+    justify-content: center;
 }
 
-.navbar__itemlist {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+#navbar li {
+    list-style-type: none;
+    padding-left: 40px;
+    position: relative;
 }
 
-.navbar__itemlist img {
-    width: 50px;
+#navbar li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.2s ease;
 }
+
+#navbar li a.active,
+#navbar li a:hover {
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: '';
+    height: 2px;
+    width: 30%;
+    background: #088178;
+    bottom: -4px;
+    left: 40px;
+    position: absolute;
+}
+
 
 /* HERO */
 .hero {
@@ -274,6 +307,69 @@ p {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.footer {
+    background-color: #415161;
+}
+
+.footer-1 {
+    margin-top: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    padding-bottom: 30px;
+    color: #F7F8F9;
+
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    color: #F7F8F9;
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+    color: #F7F8F9;
+}
+
+.footer-1 li {
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+
+
+.footer-1 a {
+    color: #F7F8F9;
+    margin-right: 0;
+
+}
+
+.footer-col img {
+    padding-bottom: 20px;
+}
+
+.footer-2 {
+    color: #F7F8F9;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+
+/*************** RESPONSIVE ******************** */
+#mobile {
+    display: block;
+}
+
+#mobile i {
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+#close {
+    display: none;
+}
 
 /* Media Query */
 
@@ -371,6 +467,50 @@ p {
 
     .featured__companies img {
         width: 100%;
+    }
+
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #415161;
+        position: fixed;
+        flex-direction: column;
+        height: 100vh;
+        top: 0;
+        gap: 20px;
+        right: -3000px;
+        padding: 80px 0 0 10px;
+        width: 100vw;
+        transition: 0.6s ease;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.01);
+
+    }
+
+    #navbar li a {
+        color: whitesmoke
+    }
+
+    #navbar.active {
+        right: 0;
+    }
+
+    #mobile {
+        display: inline-block;
+    }
+
+    #close {
+        display: block;
+        font-size: 24px;
+        color: #1a1a1a;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+    }
+
+    #close:hover {
+        color: red;
     }
 
 

@@ -13,15 +13,19 @@
 
 <body>
     <!-- ==== Header Section === -->
-    <nav class="container" id="navbar">
+    <nav class="container" id="header">
         <img src="img/logo.png" alt="">
-        <ul class="navbar__itemlist">
+        <ul id="navbar">
             <li><a href="#">Home</a></li>
             <li><a href="">All Products</a></li>
             <li><a href="">About Us</a></li>
             <li><a href="">Contact Us</a></li>
             <li><a href=""><img src="img/cart.png" alt=""></a></li>
+            <a href="#" id="close"><i class="far fa-times"></i></a>
         </ul>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
     </nav>
 
     <!-- ==== HERO  Section ==== -->
@@ -139,10 +143,64 @@
     </section>
 
     <!-- ============ Footer =============== -->
-
+    <footer class="container footer">
+        <div class="footer-1">
+            <div class="footer-col">
+                <img src="img/logoFooter.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident possimus eaque natus autem nulla
+                    accusamus voluptatum aperiam fuga. Enim placeat quisquam modi molestias veniam facere accusantium
+                    delectus illo ex totam?</p>
+            </div>
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">All Products</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Business</h3>
+                <ul>
+                    <li><a href="">Project</a></li>
+                    <li><a href="">Our Team</a></li>
+                    <li><a href="">Affiliate</a></li>
+                    <li><a href="">Customers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Get In Touch</h3>
+                <ul>
+                    <li><a href="">info@company.com</a></li>
+                    <li><a href="">1-080-1234-567</a></li>
+                    <li><a href="">Our company,USA</a></li>
+                    <li><a href="">Washington,DC</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-2">Copyright@2024 Md Mainul Hasan</div>
+    </footer>
 
     <!-- ============== Javascript for Mobile Menu =========== -->
     <script>
+        const bar = document.getElementById('bar')
+        const nav = document.getElementById('navbar')
+        const close = document.getElementById('close')
+
+        if (bar) {
+            bar.addEventListener('click', () => {
+                nav.classList.add('active')
+            })
+        }
+
+
+        if (close) {
+            close.addEventListener('click', () => {
+                nav.classList.remove('active')
+            })
+        }
 
     </script>
 </body>
